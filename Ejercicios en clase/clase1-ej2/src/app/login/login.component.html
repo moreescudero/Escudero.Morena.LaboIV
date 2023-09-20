@@ -1,0 +1,15 @@
+<h3>Log in</h3>
+<div>
+  <label for="lbl_usuario">Ingrese nombre de usuario:</label>
+  <input type="text" [(ngModel)]="nombreUsuario">
+</div>
+<div>
+    <label for="lbl_clave">Ingrese clave:</label>
+    <input type="text" [(ngModel)]="clave">
+</div>
+<div>
+    <button (click)="VerificarUsuario()">Ingresar</button>
+</div>
+<div>
+    <label *ngIf="mostrarLabel">Hola</label>
+</div>
