@@ -1,4 +1,4 @@
-<h3>Log in</h3>
+<h3>Sign in</h3>
 <div>
   <label for="lbl_usuario">Ingrese nombre de usuario:</label>
   <input type="text" [(ngModel)]="nombreUsuario">
@@ -8,8 +8,9 @@
     <input type="password" [(ngModel)]="clave">
 </div>
 <div>
-    <button (click)="VerificarUsuario()">Ingresar</button>
+    <button (click)="registrarUsuario()">Registrarse</button>
+    <button (click)="volver()">Volver</button>
 </div>
 <div>
-    <label *ngIf="mostrarLabel">Hola</label>
+    <label *ngIf="mostrarLabel">Registro exitoso!</label>
 </div>

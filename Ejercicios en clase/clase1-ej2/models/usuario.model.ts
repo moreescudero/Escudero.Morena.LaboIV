@@ -1,4 +1,4 @@
 
 export class Usuario {
-    constructor(public nombre: string, public clave: string) {}
-  }
+  constructor(public usuario: string, public clave: string) {}
+}

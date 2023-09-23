@@ -9,13 +9,15 @@ import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { FormsModule } from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BienvenidoComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

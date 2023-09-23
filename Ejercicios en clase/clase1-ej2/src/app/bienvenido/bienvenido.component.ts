@@ -12,4 +12,8 @@ export class BienvenidoComponent {
   IrALogin() {
     this.router.navigate(['/login']);
   }
+
+  IrARegistrarse() {
+    this.router.navigate(['/registro']);
+  }
 }

@@ -13,15 +13,28 @@ export class LoginComponent {
   mostrarLabel: boolean = false;
 
   constructor(private router: Router) {};
-  //usuario: Usuario = new Usuario(this.nombreUsuario, this.clave);
 
   VerificarUsuario() {
-    if (this.nombreUsuario === 'more' && this.clave === '123') {
-      this.mostrarLabel = true;
-    }
-    else {
+    const datosLocalStorage = localStorage.getItem('usuarios');
+
+    if (datosLocalStorage !== null) {
+      const usuarios = JSON.parse(datosLocalStorage);
+      let encontroUsuario = false;
+      for (let i = 0; i < usuarios.length; i++) {
+        const item = usuarios[i];
+        if (item.usuario === this.nombreUsuario && item.clave === this.clave) {
+          encontroUsuario = true;
+          break;
+        }
+      }
+      
+      if (encontroUsuario === true) {
+        this.mostrarLabel = true;
+      } else {
+        this.router.navigate(['/error']);
+      }
+    } else {
       this.router.navigate(['/error']);
     }
   }
-
 }
