@@ -7,9 +7,10 @@ import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: '', component: HomeComponent},
-  { path: 'quien-soy', component: QuienSoyComponent}
+  { path: 'quien-soy', component: QuienSoyComponent},
+  { path: '**', component: HomeComponent}
 ];
 
 @NgModule({
